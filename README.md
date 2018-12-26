@@ -52,3 +52,30 @@ https://www.chartjs.org/docs/latest/axes/labelling.html#creating-custom-tick-for
 ```
 
 https://www.chartjs.org/docs/latest/charts/bar.html#stacked-bar-chart
+
+## How to get bars of same fill / background colors?
+Set the `backgroundColor` property in datasets array as a string representing a color and chartjs will use that color for all bars. Example &mdash;
+```js
+datasets: [{
+  data: [45, 25, 20, 10],
+  backgroundColor: "#002665"
+}],
+```
+
+## How to get bars of different fill / background colors?
+Set the `backgroundColor` property in datasets array to an array of strings representing a colors and chartjs will use those colors for the bars that match the same index as of the data array. Example &mdash;
+```js
+datasets: [{
+  label: '# of Votes',
+  data: [12, 19, 3, 5, 2, 3],
+  backgroundColor: [
+    'rgba(255, 99, 132, 0.2)',
+    'rgba(54, 162, 235, 0.2)',
+    'rgba(255, 206, 86, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(255, 159, 64, 0.2)'
+  ],
+}]
+```
+If you don't have a color for a value in `data`, a default color will be used.
