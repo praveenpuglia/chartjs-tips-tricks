@@ -11,7 +11,7 @@ In `options` set `maintainAspectRatio: false` to render charts without chartjs f
 https://www.chartjs.org/docs/latest/general/responsive.html?h=maintainaspectratio
 
 ## How to format the ticks on Y Axis?
-Say you get duration in milliseconds but you want to show the ticks on the Y Axis as a duration. For this, you can
+Say you get duration in milliseconds but you want to show the ticks on the Y Axis as a duration in hh:mm:ss format. For this, you can
 1. Create a function that does the converstion. e.g. `convertMillisToDuration(millis)`
 2. Use this function in the ticks callback for yAxes in scales. Example &mdash;
 
